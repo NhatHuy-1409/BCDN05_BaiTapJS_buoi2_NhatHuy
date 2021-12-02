@@ -12,24 +12,76 @@
 </head>
 
 <body>
-    <!-- Bài tập 3 -->
+
+    <!-- Bài tập 1 -->
     <div class="row">
-        <div class="formBt3 col-4">
+        <div class="formBt1 col">
             <div class="card-body ">
-                <div class="card bg-info" style="width: 300px;">
+                <div class="card bg-info" style="width: 100%;">
+                    <p class=" bg-dark text-center text-light p-2 w-100">Tính tiền lương nhân viên</p>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Lương mỗi ngày: </label>
+                            <input type="text" class="form-control " name="" id="luongMoiNgay" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Số ngày làm</label>
+                            <input type="number" class="form-control " name="" id="soNgayLam" placeholder="0">
+                        </div>
+                        <button onclick="tienLuong()" type="submit" class=" d-block btn btn-danger mx-auto"
+                            id="btnCalc">Tính
+                            nào</button>
+                        <p id="tongLuong" class=" bg-dark text-center text-light p-2 w-100 mt-4">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bài tập 2 -->
+        <div class="formBt5 col">
+            <div class="card-body ">
+                <div class="card bg-info" style="width: 100%;">
+                    <p class=" bg-dark text-center text-light p-2 w-100">Tính trung bình cộng 5 số</p>
+                    <div class="card-body">
+                        <h5 class="my-1 ">Nhập vào 5 số:</h5>
+                        <div class="form-group">
+                            <label for="">Số 1: </label>
+                            <input type="number" class="form-control " name="" id="num1" placeholder="00">
+                            <label for="">Số 2: </label>
+                            <input type="number" class="form-control " name="" id="num2" placeholder="00">
+                            <label for="">Số 3: </label>
+                            <input type="number" class="form-control " name="" id="num3" placeholder="00">
+                            <label for="">Số 4: </label>
+                            <input type="number" class="form-control " name="" id="num4" placeholder="00">
+                            <label for="">Số 5: </label>
+                            <input type="number" class="form-control " name="" id="num5" placeholder="00">
+                        </div>
+
+                        <button onclick="tinhSoThuc()" type="submit" class="d-block btn btn-danger mx-auto"
+                            id="btnCalc">Tính nào</button>
+                        <p class="my-2">Trung bình 5 số:</p>
+                        <p id="tb" class=" bg-dark text-center text-light p-2 w-100 mt-4">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bài tập 3 -->
+        <div class="formBt3 col">
+            <div class="card-body ">
+                <div class="card bg-info" style="width: 100%;">
                     <p class=" bg-dark text-center text-light p-2 w-100">Quy đổi USD => VND</p>
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Giá tiền USD</label>
-                            <input disabled="disabled" type="text" class="form-control " name="" id=""
-                                aria-describedby="helpId" placeholder="23.500">
+                            <input disabled="disabled" type="text" class="form-control " id=""
+                                placeholder="23.500">
                         </div>
                         <div class="form-group">
                             <label for="">Số tiền USD</label>
-                            <input type="number" class="form-control " name="" id="soTienUsd" aria-describedby="helpId"
-                                placeholder="???">
+                            <input type="number" class="form-control " id="soTienUsd" placeholder="0">
                         </div>
-                        <button onclick="tinhTienUsd()" type="submit" class=" d-block btn btn-danger mx-auto" id="btnCalc">Tính
+                        <button onclick="tinhTienUsd()" type="submit" class=" d-block btn btn-danger mx-auto"
+                            id="btnCalc">Tính
                             nào</button>
                         <p id="soTienVnd" class=" bg-dark text-center text-light p-2 w-100 mt-4">0</p>
                     </div>
@@ -38,22 +90,21 @@
         </div>
 
         <!-- Bài tập 4 -->
-        <div class="formBt4 col-4">
+        <div class="formBt4 col">
             <div class="card-body ">
-                <div class="card bg-info" style="width: 300px;">
+                <div class="card bg-info" style="width: 100%;">
                     <p class=" bg-dark text-center text-light p-2 w-100">Diện tích và chu vi hình chữ nhật</p>
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Chiều dài</label>
-                            <input type="number" class="form-control " name="" id="chieuDai" aria-describedby="helpId"
-                                placeholder="0">
+                            <input type="number" class="form-control " id="chieuDai" placeholder="0">
                         </div>
                         <div class="form-group">
                             <label for="">chiều rộng</label>
-                            <input type="number" class="form-control " name="" id="chieuRong" aria-describedby="helpId"
-                                placeholder="0">
+                            <input type="number" class="form-control " id="chieuRong" placeholder="0">
                         </div>
-                        <button onclick="tinhHcn()" type="submit" class=" d-block btn btn-danger mx-auto" id="btnCalc">Tính nào</button>
+                        <button onclick="tinhHcn()" type="submit" class=" d-block btn btn-danger mx-auto"
+                            id="btnCalc">Tính nào</button>
                         <p class="my-2">Diện tích là:</p>
                         <p id="dienTich" class=" bg-dark text-center text-light p-2 w-100 ">0</p>
                         <p class="my-2">Chu vi là:</p>
@@ -63,18 +114,18 @@
             </div>
         </div>
         <!-- Bài tập 5 -->
-        <div class="formBt5 col-4">
+        <div class="formBt5 col">
             <div class="card-body ">
-                <div class="card bg-info" style="width: 300px;">
+                <div class="card bg-info" style="width: 100%;">
                     <p class=" bg-dark text-center text-light p-2 w-100">Tính tổng số có 2 chữ số</p>
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Nhập vào số có 2 chữ số: </label>
-                            <input type="number" class="form-control " name="" id="num" aria-describedby="helpId"
-                                placeholder="00">
+                            <input type="number" class="form-control " id="num" placeholder="00">
                         </div>
 
-                        <button onclick="tinhSo()" type="submit" class="d-block btn btn-danger mx-auto" id="btnCalc">Tính nào</button>
+                        <button onclick="tinhSo()" type="submit" class="d-block btn btn-danger mx-auto"
+                            id="btnCalc">Tính nào</button>
                         <p class="my-2">Tổng chữ số hàng chục và hàng đơn vị:</p>
                         <p id="tinhSo" class=" bg-dark text-center text-light p-2 w-100 mt-4">0</p>
                     </div>

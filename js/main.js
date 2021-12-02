@@ -1,3 +1,55 @@
+
+/**----------Bài 1--------
+ * 
+ * K1 : Input
+ * luongMoiNgay
+ * soNgayLam
+ * 
+ * K2:
+ * B1: Khai báo biến và gán giá trị
+ * B2: tính tiền lương
+ *      tongLuong = luongMoiNgay * soNgayLam;
+ * K3: Output
+ * tongLuong
+ * 
+ */
+function tienLuong() {
+    // B1
+    var luongMoiNgay = document.getElementById("luongMoiNgay").value;
+    var soNgayLam = document.getElementById("soNgayLam").value;
+    // B2
+    var tongLuong = luongMoiNgay * soNgayLam;
+    // B3
+    document.getElementById("tongLuong").innerHTML = new Intl.NumberFormat('de-DE').format(tongLuong) + " VND"
+}
+
+/** ---------Bài-2----------
+ * 
+ * K1: 
+ *  Nhập 5 số thực
+ * 
+ * k2:
+ * B1/Khai báo biến và gán giá trị
+ * num1,num2,num3,num4,num5
+ * B2/Tính trung bình 5 số
+ * tb = (num1 +...+ num5)/5;
+ * 
+ * k3: Xuất ra giá trị tb của 5 số 
+ * tb
+ */
+
+function tinhSoThuc() {
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    var num3 = document.getElementById("num3").value;
+    var num4 = document.getElementById("num4").value;
+    var num5 = document.getElementById("num5").value;
+    
+    var tb = (parseFloat(num1) + parseFloat(num2) + parseFloat(num3) + parseFloat(num4) + parseFloat(num5)) / 5;
+    
+    document.getElementById("tb").innerHTML = tb;
+}
+
 /** -----------Bai-3------------- */
 /**Sơ đồ 3 khối
  * 
@@ -16,7 +68,6 @@
  * Số tiền sau khi quy đổi ra VND
  * 
  */
-
 function tinhTienUsd() {
     // B1:
     var giaUsd = 23500;
@@ -53,13 +104,11 @@ function tinhHcn() {
     var chieuRong = document.getElementById("chieuRong").value;
     //  B2
     var dienTich = chieuDai * chieuRong;
-    var chuVi = (parseInt(chieuDai)+parseInt(chieuRong))*2;
+    var chuVi = (parseInt(chieuDai) + parseInt(chieuRong)) * 2;
     // Xuất kết quả
     document.getElementById("dienTich").innerHTML = dienTich;
     document.getElementById("chuVi").innerHTML = chuVi;
-
 }
-
 
 /** -----------Bai-5------------- */
 /**Sơ đồ 3 khối
@@ -91,5 +140,5 @@ function tinhSo() {
     // B3:
     var tong = ten + unit;
     // Xuất kết quả
-    document.getElementById("tinhSo").innerHTML = tong ;
+    document.getElementById("tinhSo").innerHTML = tong;
 }
